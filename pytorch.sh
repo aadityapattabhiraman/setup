@@ -40,5 +40,5 @@ RUN_COMMAND="pip3 install torch torchvision torchaudio --index-url https://downl
 
 echo "Run the following command to install PyTorch:"
 echo "$RUN_COMMAND"
-# source $VENV_NAME/bin/activate
-# $RUN_COMMAND
+source $VENV_NAME/bin/activate
+$RUN_COMMAND
