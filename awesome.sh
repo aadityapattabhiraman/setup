@@ -25,6 +25,7 @@ wget https://archive.archlinux.org/packages/a/awesome/awesome-4.3-3-x86_64.pkg.t
 yes | sudo pacman -U awesome-4.3-3-x86_64.pkg.tar.zst
 rm awesome-4.3-3-x86_64.pkg.tar.zst
 
+
 echo "Packages installed successfully. Cloning repository..."
 git clone https://github.com/aadityapattabhiraman/awesomwm ~/.config/awesome
 
