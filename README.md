@@ -18,5 +18,5 @@ Single Command:
 ```bash
 curl -O https://raw.githubusercontent.com/aadityapattabhiraman/setup/main/pytorch.sh
 chmod +x pytorch.sh  
-./pytorch.sh
+sudo ./pytorch.sh
 ```
