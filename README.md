@@ -8,7 +8,7 @@ Single Command:
 ```bash
 curl -O https://raw.githubusercontent.com/aadityapattabhiraman/setup/main/awesome.sh
 chmod +x awesome.sh  
-./awesome
+./awesome.sh
 ```
 
 ### pytorch.sh
@@ -18,5 +18,5 @@ Single Command:
 ```bash
 curl -O https://raw.githubusercontent.com/aadityapattabhiraman/setup/main/pytorch.sh
 chmod +x pytorch.sh  
-./pytorch
+./pytorch.sh
 ```
