@@ -18,13 +18,8 @@ if [ -z "$aur_manager" ]; then
   exit 1
 fi
 
-packages=("rofi" "picom" "i3lock-fancy" "xclip" "ttf-roboto" "polkit-gnome" "materia-theme" "lxappearance" "flameshot" "pnmixer" "network-manager-applet" "xfce4-power-manager" "qt5-styleplugins" "papirus-icon-theme" "git")
+packages=("rofi" "picom" "i3lock-fancy" "xclip" "ttf-roboto" "polkit-gnome" "materia-theme" "lxappearance" "flameshot" "pnmixer" "network-manager-applet" "xfce4-power-manager" "qt5-styleplugins" "papirus-icon-theme" "git" "awesome" "dunst")
 yes | $aur_manager -S "${packages[@]}" -y
-
-wget https://archive.archlinux.org/packages/a/awesome/awesome-4.3-3-x86_64.pkg.tar.zst
-yes | sudo pacman -U awesome-4.3-3-x86_64.pkg.tar.zst
-rm awesome-4.3-3-x86_64.pkg.tar.zst
-
 
 echo "Packages installed successfully. Cloning repository..."
 git clone https://github.com/aadityapattabhiraman/awesomwm ~/.config/awesome
@@ -37,3 +32,51 @@ sed -i '/@import/c\@import "'$HOME'/.config/awesome/theme/sidebar.rasi"' ~/.conf
 echo "Same theme for Qt/KDE applications and GTK applications, and fix missing indicators"
 echo "XDG_CURRENT_DESKTOP=Unity" >> /etc/environment
 echo "QT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment
+
+mkdir -p ~/.config/dunst/
+# Create the dunstrc file and add the configuration
+cat > ~/.config/dunst/dunstrc << EOF
+# Dunst Configuration File
+
+# Global Settings
+[global]
+    font = Monospace 12
+    origin = bottom-left
+    line_height = 4
+    padding = 8
+    sort = yes
+    offset = 20x25
+    width = 500
+    shrink = yes
+    frame_color = "#000000"
+    frame_width = 0
+
+
+# Urgency Settings
+[urgency_low]
+    # Background color
+    background = "#000000"
+    # Foreground color
+    foreground = "#00FF00"
+    # Timeout
+    timeout = 5
+
+
+[urgency_normal]
+    background = "#2f343f"
+    foreground = "#d3dae3"
+    timeout = 20
+
+
+[urgency_critical]
+    background = "#ff3030"
+    foreground = "#ffffff"
+    timeout = 0
+
+
+# Custom Notification Format
+[format]
+    format = "<b>%s</b>\n%b"
+EOF
+
+echo "Dunst configuration file created successfully."
