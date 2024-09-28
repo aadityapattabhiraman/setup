@@ -79,4 +79,4 @@ cat > ~/.config/dunst/dunstrc << EOF
     format = "<b>%s</b>\n%b"
 EOF
 
-echo "Dunst configuration file created successfully."
+echo "Dunst configuration file created successfully." 
