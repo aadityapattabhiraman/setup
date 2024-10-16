@@ -20,3 +20,9 @@ curl -O https://raw.githubusercontent.com/aadityapattabhiraman/setup/main/pytorc
 chmod +x pytorch.sh  
 sudo ./pytorch.sh
 ```
+
+### hdmi.sh
+This file sets up my dual monitor config on startup.
+
+### markdown.py
+This file uses a previewed markdown file and saves it as .html along with the images so that a .html file for everything.
