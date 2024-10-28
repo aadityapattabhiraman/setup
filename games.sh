@@ -18,4 +18,4 @@ fi
 
 $aur_manager -S lutris wine winetricks
 sudo systemctl restart systemd-binfmt
-$aur_manager -S lib32-nvidia-utils
+$aur_manager -S lib32-nvidia-utils dxvk-bin
