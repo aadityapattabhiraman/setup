@@ -37,6 +37,13 @@ git clone https://aur.archlinux.org/tor-browser-bin.git
 cd tor-browser-bin/
 gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
 makepkg -si
+cd ..
+
+# Installing Element-Nightly Desktop
+echo "Cloning & Installing Element-Nightly Binary Package."
+git clone https://aur.archlinux.org/element-desktop-nightly-bin.git
+cd element-nightly-desktop-bin/
+makepkg -si
 cd
 
 # Installing Necessary Packages for AwesomeWM
